@@ -1,13 +1,14 @@
-import NavBar from '../components/NavBar';
+import Layout from '../components/Layout'
+import Seo from '../components/Seo'
 
-export default function HomePage() {
+export default function Page() {
   return (
-    <>
-      <NavBar />
-      <main className="w-full px-6 py-16 lg:px-32">
-        <h1 className="text-3xl font-bold text-center mb-12">这是首页（含导航）</h1>
-        <p className="text-center text-gray-600">你可以从上方导航进入产品页、解决方案等。</p>
-      </main>
-    </>
-  );
+    <Layout>
+      <Seo title="首页内容" description="首页内容页面描述" />
+      <div className="w-full px-6 py-16 lg:px-32 text-center">
+        <h1 className="text-2xl font-bold">首页内容</h1>
+        <p className="text-gray-500">这里是 首页内容 的主体内容。</p>
+      </div>
+    </Layout>
+  )
 }
